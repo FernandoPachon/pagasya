@@ -15,12 +15,12 @@ const Registro = () => {
   return (
     <>
       <div className='containerRegister'>
-        <div>
+        <div className='containerLogo'>
           <img width={"300px"} src="assets\Cream and Green Simple Clean Online Store Logo_page-0001.jpg" alt="" />
         </div>
-        <div>
+        <div className='containerForm'>
           <p>¿Ya estas registrado? Ingresar</p>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form className='formRegister' onSubmit={handleSubmit(onSubmit)}>
             <h1>Crear cuenta</h1>
             <input defaultValue="Nombres" {...register("Nombres")} />
             <input defaultValue="Apellidos" {...register("Apellidos")} />
@@ -29,7 +29,7 @@ const Registro = () => {
             <input {...register("contraseña", { required: true })} />
             <br />
             {errors.exampleRequired && <span>Este campo es requerido</span>}
-            <input type="submit" value="Crear" />
+            <input className='sudmitRegister' type="submit" value="Crear" />
           </form>
           <hr />
           <div>
